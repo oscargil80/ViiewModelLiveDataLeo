@@ -7,12 +7,43 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvValor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Worfffffld!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="172dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="68sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnInc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="58sp"
+        android:backgroundTint="#1E88E5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvValor"
+        app:layout_constraintEnd_toStartOf="@id/btnDec"
+        />
+
+    <Button
+        android:id="@+id/btnDec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="58sp"
+        android:backgroundTint="#1E88E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvValor"
+        app:layout_constraintStart_toEndOf="@id/btnInc"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
