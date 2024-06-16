@@ -13,6 +13,7 @@ class MainViewModel:ViewModel() {
 
     init {
         _count.value = 0
+
     }
 
 

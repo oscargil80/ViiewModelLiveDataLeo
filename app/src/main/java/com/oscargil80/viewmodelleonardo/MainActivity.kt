@@ -9,6 +9,7 @@ import com.oscargil80.viewmodelleonardo.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding :ActivityMainBinding
 
+
     private  val viewModel  = MainViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
