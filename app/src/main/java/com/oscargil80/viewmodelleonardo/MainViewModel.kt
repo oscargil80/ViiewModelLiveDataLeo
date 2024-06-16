@@ -1,6 +1,4 @@
 package com.oscargil80.viewmodelleonardo
-
-
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,22 +6,17 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel:ViewModel() {
 
-    private var _count  = MutableLiveData<Int>()
-    val count: LiveData<Int> = _count
+    private var counter = 0
 
-    init {
-        _count.value = 0
+    fun getinitialCounter():Int{
+        return counter
+    }
 
+    fun getUpdateCounter():Int{
+        return ++counter
     }
 
 
-    fun incrementarValor(){
-           _count.value = _count.value?.plus(1)
-        }
-
-    fun decrementarValor(){
-        _count.value = _count.value?.minus(1)
-    }
 
 
 }

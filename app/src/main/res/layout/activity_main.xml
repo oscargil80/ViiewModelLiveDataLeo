@@ -7,43 +7,48 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvValor"
+        android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
-        android:text="0"
-        android:textColor="@color/black"
-        android:textSize="68sp"
+        android:layout_marginTop="56dp"
+        android:text="Counter Example"
+        android:textColor="@color/red"
+        android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnInc"
+    <TextView
+        android:id="@+id/tvValor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
-        android:textSize="58sp"
-        android:backgroundTint="#1E88E5"
+        android:text="0"
+        android:textColor="@color/red"
+        android:textSize="68sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="186dp"
+        tools:layout_editor_absoluteY="293dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvValor"
-        app:layout_constraintEnd_toStartOf="@id/btnDec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        app:layout_constraintBottom_toTopOf="@id/btnCounter"
         />
 
     <Button
-        android:id="@+id/btnDec"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnCounter"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="-"
-        android:textSize="58sp"
-        android:backgroundTint="#1E88E5"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:backgroundTint="@color/red"
+        android:text="Count"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvValor"
-        app:layout_constraintStart_toEndOf="@id/btnInc"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvValor" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
