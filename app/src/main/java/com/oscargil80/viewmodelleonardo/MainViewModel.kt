@@ -4,25 +4,27 @@ package com.oscargil80.viewmodelleonardo
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.*
 
 
-class MainViewModel:ViewModel() {
+class MainViewModel : ViewModel() {
 
-    private var _count  = MutableLiveData<Int>()
-    val count: LiveData<Int> = _count
+    private var _time = MutableStateFlow<Int>(0)
+    val count: StateFlow<Int> = _time
 
     init {
-        _count.value = 0
-
+        startTimer()
     }
 
 
-    fun incrementarValor(){
-           _count.value = _count.value?.plus(1)
-        }
+    private fun startTimer() {
 
-    fun decrementarValor(){
-        _count.value = _count.value?.minus(1)
+        (60 downTo 0).asFlow().onEach { value ->
+            _time.value = value
+            delay(1000)
+        }.launchIn(viewModelScope)
     }
 
 
